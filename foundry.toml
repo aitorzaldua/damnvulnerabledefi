@@ -3,5 +3,6 @@ src = 'src'
 out = 'out'
 libs = ['lib']
 remappings = ["@openzeppelin/=lib/openzeppelin-contracts/"]
+solc-version = "0.8.7"
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
