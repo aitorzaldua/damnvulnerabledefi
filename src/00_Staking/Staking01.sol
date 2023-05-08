@@ -10,7 +10,8 @@ contract Staking01 {
     mapping (address => uint256) StakeBalances;
 
     function StakingCoins(address token, uint amount) external returns(bool){
-        require ((msg.sender).balance >= amount, "Not enough tokens");
+        require (IERC20(token).balanceOf(msg.sender) >= amount, "Not enough tokens");
+
 
         StakeBalances[msg.sender] = StakeBalances[msg.sender] + amount;
 
